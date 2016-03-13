@@ -9,7 +9,7 @@ core:
 
     # These strings are used in the Appearance page.
     appearance:
-      colored_header_label: Header faver
+      colored_header_label: Header u boji
       colors_heading: Farver
       colors_text: Vælg to farver for at style dit forum. Det første vil blive anvendt som highlight-farve, mens den anden anvendes til baggrundselementer.
       custom_styles_heading: Egne styleing

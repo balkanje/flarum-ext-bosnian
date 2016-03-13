@@ -1,12 +1,12 @@
-// Custom Danish Moment.js Locale File
+// Custom Serbian Moment.js Locale File
 // Based on https://github.com/moment/moment/blob/develop/locale/da.js - and props to Ulrik Nielsen (https://github.com/mrbase) for that :)
 
-moment.locale('da', {
-  months : 'januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december'.split('_'),
-  monthsShort : 'jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec'.split('_'),
-  weekdays : 'søndag_mandag_tirsdag_onsdag_torsdag_fredag_lørdag'.split('_'),
-  weekdaysShort : 'søn_man_tir_ons_tor_fre_lør'.split('_'),
-  weekdaysMin : 'sø_ma_ti_on_to_fr_lø'.split('_'),
+moment.locale('sr', {
+  months : 'januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar'.split('_'),
+  monthsShort : 'jan_feb_mar_apr_maj_jun_jul_avg_sep_okt_nov_dec'.split('_'),
+  weekdays : 'nedelja_ponedeljak_utorak_sreda_cetvrtak_petak_subota'.split('_'),
+  weekdaysShort : 'ned_pon_uto_sre_cet_pet_sub'.split('_'),
+  weekdaysMin : 'ne_po_ut_sr_ce_pe_su'.split('_'),
   longDateFormat : {
     LT : 'HH:mm',
     LTS : 'HH:mm:ss',
@@ -16,27 +16,27 @@ moment.locale('da', {
     LLLL : 'dddd [d.] D. MMMM YYYY HH:mm'
   },
   calendar : {
-    sameDay: '[I dag kl.] LT',
-    nextDay: '[I morgen kl.] LT',
+    sameDay: '[Danas] LT',
+    nextDay: '[Sutra] LT',
     nextWeek: 'dddd [kl.] LT',
-    lastDay: '[I går kl.] LT',
+    lastDay: '[Juce] LT',
     lastWeek: '[sidste] dddd [kl] LT',
     sameElse: 'L'
   },
   relativeTime : {
-    future : 'om %s',
-    past : '%s siden',
-    s : 'få sekunder',
-    m : 'et minut',
-    mm : '%d minutter',
-    h : 'en time',
+    future : 'za %s',
+    past : '%s pre',
+    s : 'sekundi',
+    m : 'minuta',
+    mm : '%d minuta',
+    h : 'sati',
     hh : '%d timer',
-    d : 'en dag',
-    dd : '%d dage',
-    M : 'en måned',
-    MM : '%d måneder',
-    y : 'et år',
-    yy : '%d år'
+    d : 'dan',
+    dd : '%d dana',
+    M : 'mesec',
+    MM : '%d meseci',
+    y : 'godina',
+    yy : '%d godina'
   },
   ordinalParse: /\d{1,2}\./,
   ordinal : '%d.',

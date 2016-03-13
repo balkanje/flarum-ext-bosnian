@@ -1,20 +1,20 @@
 {
-    "name": "berteltorp/danish",
+    "name": "laravelrs/serbian",
     "type": "flarum-extension",
-    "description": "Danish language pack.",
-    "homepage": "https://github.com/berteltorp/Flarum-da-DK",
+    "description": "Serbian language pack.",
+    "homepage": "https://github.com/laravelrs/Flarum-sr-RS",
     "keywords": ["locale"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Bertel Torp",
-            "email": "bertel@bertel.dk",
-            "homepage": "https://bertel.dk/"
+            "name": "Laravel Serbia",
+            "email": "laravel.rs@gmail.com",
+            "homepage": "https://laravel.rs/"
         }
     ],
     "support": {
-        "issues": "https://github.com/berteltorp/Flarum-da-DK/issues",
-        "source": "https://github.com/berteltorp/Flarum-da-DK",
+        "issues": "https://github.com/laravelrs/Flarum-sr-RS/issues",
+        "source": "https://github.com/laravelrs/Flarum-sr-RS",
         "forum": "https://discuss.flarum.org/"
     },
     "require": {
@@ -32,7 +32,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Danish",
+            "title": "Serbian",
             "icon": {
                 "image": "icon.svg",
                 "backgroundColor": "#fff",
@@ -41,8 +41,8 @@
             }
         },
         "flarum-locale": {
-            "code": "da",
-            "title": "Dansk"
+            "code": "sr",
+            "title": "Serbian"
         }
     }
 }

@@ -16,7 +16,7 @@ flarum-tags:
       color_label: Farver
       description_label: Beskrivelse
       delete_tag_button: Fjern label
-      delete_tag_confirmation: Er du sikker på at du vil fjerne dette tag? De tilhørende diskussioner vil IKKE blive fjernet.
+      delete_tag_confirmation: "Er du sikker på at du vil fjerne dette tag? De tilhørende diskussioner vil IKKE blive fjernet."
       hide_label: Skjul alle diskussioner
       name_label: => flarum-tags.ref.name
       name_placeholder: => flarum-tags.ref.name
@@ -45,7 +45,7 @@ flarum-tags:
 
     # These strings are used in the Tags page.
     tags:
-      about_tags_text: Labels bruges til at klassificere diskussioner. Primære labels ligne traditionelle kategorier: de kan være anbragt i et to-delt hierarki. Sekundære labels har hverken hierarki eller rækkefølge og er meget velegnet til mikro-kategorisering.
+      about_tags_text: "Labels bruges til at klassificere diskussioner. Primære labels ligne traditionelle kategorier: de kan være anbragt i et to-delt hierarki. Sekundære labels har hverken hierarki eller rækkefølge og er meget velegnet til mikro-kategorisering."
       create_tag_button: => flarum-tags.ref.create_tag
       primary_heading: Primære labels
       secondary_heading: Sekundære labels

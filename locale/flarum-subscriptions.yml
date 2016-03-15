@@ -38,7 +38,7 @@ flarum-subscriptions:
       ignoring_button: => flarum-subscriptions.ref.ignoring
       ignoring_text: Må ikke udløse underretninger, og skjules fra diskussionslisten.
       not_following_button: Følges ikke
-      not_following_text: Bliv underrettet når du bliver @nævnt.
+      not_following_text: "Bliv underrettet når du bliver @nævnt."
       notify_email_tooltip: Modtag en email når der er nye indlæg.
       notify_alert_tooltip: Modtag en forum notifikation når der er nye indlæg.
 

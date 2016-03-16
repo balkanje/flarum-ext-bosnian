@@ -1,47 +1,95 @@
-// Custom Serbian Moment.js Locale File
-// Based on https://github.com/moment/moment/blob/develop/locale/da.js - and props to Ulrik Nielsen (https://github.com/mrbase) for that :)
+// Custom Serbian (Latin Script) Moment.js Locales
+// Based on: https://github.com/moment/moment/blob/develop/locale/sr.js
+
+var translator = {
+  words: { //Different grammatical cases
+    m: ['jedan minut', 'jedne minute'],
+    mm: ['minut', 'minute', 'minuta'],
+    h: ['jedan sat', 'jednog sata'],
+    hh: ['sat', 'sata', 'sati'],
+    dd: ['dan', 'dana', 'dana'],
+    MM: ['mesec', 'meseca', 'meseci'],
+    yy: ['godina', 'godine', 'godina']
+  },
+  correctGrammaticalCase: function (number, wordKey) {
+    return number === 1 ? wordKey[0] : (number >= 2 && number <= 4 ? wordKey[1] : wordKey[2]);
+  },
+  translate: function (number, withoutSuffix, key) {
+    var wordKey = translator.words[key];
+    if (key.length === 1) {
+      return withoutSuffix ? wordKey[0] : wordKey[1];
+    } else {
+      return number + ' ' + translator.correctGrammaticalCase(number, wordKey);
+    }
+  }
+};
 
 moment.locale('sr', {
-  months : 'januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar'.split('_'),
-  monthsShort : 'jan_feb_mar_apr_maj_jun_jul_avg_sep_okt_nov_dec'.split('_'),
-  weekdays : 'nedelja_ponedeljak_utorak_sreda_cetvrtak_petak_subota'.split('_'),
-  weekdaysShort : 'ned_pon_uto_sre_cet_pet_sub'.split('_'),
-  weekdaysMin : 'ne_po_ut_sr_ce_pe_su'.split('_'),
-  longDateFormat : {
-    LT : 'HH:mm',
-    LTS : 'HH:mm:ss',
-    L : 'DD/MM/YYYY',
-    LL : 'D. MMMM YYYY',
-    LLL : 'D. MMMM YYYY HH:mm',
-    LLLL : 'dddd [d.] D. MMMM YYYY HH:mm'
+  months: ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'],
+  monthsShort: ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun', 'jul', 'avg.', 'sep.', 'okt.', 'nov.', 'dec.'],
+  weekdays: ['nedelja', 'ponedeljak', 'utorak', 'sreda', 'četvrtak', 'petak', 'subota'],
+  weekdaysShort: ['ned.', 'pon.', 'uto.', 'sre.', 'čet.', 'pet.', 'sub.'],
+  weekdaysMin: ['ne', 'po', 'ut', 'sr', 'če', 'pe', 'su'],
+  longDateFormat: {
+    LT: 'H:mm',
+    LTS : 'H:mm:ss',
+    L: 'DD. MM. YYYY',
+    LL: 'D. MMMM YYYY',
+    LLL: 'D. MMMM YYYY H:mm',
+    LLLL: 'dddd, D. MMMM YYYY H:mm'
   },
-  calendar : {
-    sameDay: '[Danas] LT',
-    nextDay: '[Sutra] LT',
-    nextWeek: 'dddd [kl.] LT',
-    lastDay: '[Juce] LT',
-    lastWeek: '[sidste] dddd [kl] LT',
-    sameElse: 'L'
+  calendar: {
+    sameDay: '[danas u] LT',
+    nextDay: '[sutra u] LT',
+    nextWeek: function () {
+      switch (this.day()) {
+      case 0:
+        return '[u] [nedelju] [u] LT';
+      case 3:
+        return '[u] [sredu] [u] LT';
+      case 6:
+        return '[u] [subotu] [u] LT';
+      case 1:
+      case 2:
+      case 4:
+      case 5:
+        return '[u] dddd [u] LT';
+      }
+    },
+    lastDay  : '[juče u] LT',
+    lastWeek : function () {
+      var lastWeekDays = [
+        '[prošle] [nedelje] [u] LT',
+        '[prošlog] [ponedeljka] [u] LT',
+        '[prošlog] [utorka] [u] LT',
+        '[prošle] [srede] [u] LT',
+        '[prošlog] [četvrtka] [u] LT',
+        '[prošlog] [petka] [u] LT',
+        '[prošle] [subote] [u] LT'
+      ];
+      return lastWeekDays[this.day()];
+    },
+    sameElse : 'L'
   },
   relativeTime : {
     future : 'za %s',
-    past : '%s pre',
-    s : 'sekundi',
-    m : 'minuta',
-    mm : '%d minuta',
-    h : 'sati',
-    hh : '%d timer',
-    d : 'dan',
-    dd : '%d dana',
-    M : 'mesec',
-    MM : '%d meseci',
-    y : 'godina',
-    yy : '%d godina'
+    past   : 'pre %s',
+    s      : 'nekoliko sekundi',
+    m      : sr__translator.translate,
+    mm     : sr__translator.translate,
+    h      : sr__translator.translate,
+    hh     : sr__translator.translate,
+    d      : 'dan',
+    dd     : sr__translator.translate,
+    M      : 'mesec',
+    MM     : sr__translator.translate,
+    y      : 'godinu',
+    yy     : sr__translator.translate
   },
   ordinalParse: /\d{1,2}\./,
   ordinal : '%d.',
   week : {
     dow : 1, // Monday is the first day of the week.
-    doy : 4  // The week that contains Jan 4th is the first week of the year.
+    doy : 7  // The week that contains Jan 1st is the first week of the year.
   }
 });

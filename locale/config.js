@@ -24,7 +24,7 @@ var translator = {
   }
 };
 
-moment.locale('sr', {
+moment.locale('sr-Latn', {
   months: ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'],
   monthsShort: ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun', 'jul', 'avg.', 'sep.', 'okt.', 'nov.', 'dec.'],
   weekdays: ['nedelja', 'ponedeljak', 'utorak', 'sreda', 'četvrtak', 'petak', 'subota'],
@@ -75,16 +75,16 @@ moment.locale('sr', {
     future : 'za %s',
     past   : 'pre %s',
     s      : 'nekoliko sekundi',
-    m      : sr__translator.translate,
-    mm     : sr__translator.translate,
-    h      : sr__translator.translate,
-    hh     : sr__translator.translate,
+    m      : translator.translate,
+    mm     : translator.translate,
+    h      : translator.translate,
+    hh     : translator.translate,
     d      : 'dan',
-    dd     : sr__translator.translate,
+    dd     : translator.translate,
     M      : 'mesec',
-    MM     : sr__translator.translate,
+    MM     : translator.translate,
     y      : 'godinu',
-    yy     : sr__translator.translate
+    yy     : translator.translate
   },
   ordinalParse: /\d{1,2}\./,
   ordinal : '%d.',

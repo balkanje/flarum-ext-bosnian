@@ -30,8 +30,8 @@
             }
         },
         "flarum-locale": {
-            "code": "sr-Latn",
-            "title": "Srpski"
+            "code": "bs",
+            "title": "Bosanski"
         }
     }
 }

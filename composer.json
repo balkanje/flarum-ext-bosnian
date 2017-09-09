@@ -1,27 +1,27 @@
 {
-    "name": "laravelrs/flarum-ext-serbian-latin",
+    "name": "balkanje/flarum-ext-bosnian",
     "type": "flarum-extension",
-    "description": "Serbian (Latin Script) language pack.",
-    "homepage": "https://github.com/laravelrs/flarum-ext-serbian-latin",
+    "description": "Bosnian language pack.",
+    "homepage": "https://github.com/balkanje/flarum-ext-bosnian",
     "keywords": ["locale"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Laravel Serbia",
-            "email": "laravel.rs@gmail.com",
-            "homepage": "https://laravel.rs/"
+            "name": "HejMedia",
+            "email": "balkanje@gmail.com",
+            "homepage": "https://hejmedia.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/laravelrs/flarum-ext-serbian-latin/issues",
-        "source": "https://github.com/laravelrs/flarum-ext-serbian-latin"
+        "issues": "https://github.com/balkanje/flarum-ext-bosnian/issues",
+        "source": "https://github.com/balkanje/flarum-ext-bosnian"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.4"
+        "flarum/core": "^0.1.0-beta.7"
     },
     "extra": {
         "flarum-extension": {
-            "title": "Serbian (Latin Script)",
+            "title": "Bosnian",
             "icon": {
                 "image": "icon.svg",
                 "backgroundColor": "#fff",
